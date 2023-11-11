@@ -51,6 +51,9 @@ export default function App() {
         setLastNumber(currentNumber + " = ")
         calculator()
         return
+      case '%':
+        setCurrentNumber((parseFloat(currentNumber) / 100).toString());
+        return;
       case '+/-':
         return
     }
