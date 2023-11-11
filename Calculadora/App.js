@@ -77,12 +77,12 @@ export default function App() {
 
         {buttons.map((button) => 
           button === '=' ? // Mapeamento do botão =
-        <TouchableOpacity onPress={() => handleInput(button)} key={button} style={[styles.button, {backgroundColor: '#3dd0e3'}]}>
+        <TouchableOpacity onPress={() => handleInput(button)} key={button} style={[styles.button, {backgroundColor: '#250252'}]}>
           <Text style={[styles.textButton, {color: "white", fontSize: 30}]}>{button}</Text>
         </TouchableOpacity>
           : // Mapeamento dos outros botões
           <TouchableOpacity onPress={() => handleInput(button)} key={button} style={styles.button}>
-            <Text style={[styles.textButton, {color: typeof(button) === 'number' ? 'black': '#0093a6'}]}>{button}</Text>
+            <Text style={[styles.textButton, {color: typeof(button) === 'number' ? 'white': '#7c7c7c'}]}>{button}</Text>
           </TouchableOpacity>
         )}
       </View>
@@ -98,10 +98,10 @@ const styles = StyleSheet.create({
   results: {
     flex: 2,
     justifyContent: "center",
-    backgroundColor: "#f5f5f5"
+    backgroundColor: "#250252"
   },
   resultText: {
-    color: "#282F38",
+    color: "white",
     fontSize: 32,
     fontWeight: "bold",
     padding: 12,
@@ -116,9 +116,11 @@ const styles = StyleSheet.create({
   buttons: {
     flexDirection: 'row',
     flexWrap: 'wrap',
+    backgroundColor: '#410087'
+    
   },
   button: {
-    backgroundColor: 'white',
+    backgroundColor: '#410087',
     alignItems: 'center',
     justifyContent: 'center',
     minWidth: 90, 
@@ -128,5 +130,6 @@ const styles = StyleSheet.create({
   textButton: {
     color: "#7c7c7c",
     fontSize: 20,
+    
   } 
 });
