@@ -55,6 +55,7 @@ export default function App() {
         setCurrentNumber((parseFloat(currentNumber) / 100).toString());
         return;
       case '+/-':
+        setCurrentNumber((parseFloat(currentNumber) * -1).toString());
         return
     }
 
